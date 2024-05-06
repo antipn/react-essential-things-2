@@ -1,25 +1,29 @@
-import logo from './logo.svg';
 import './App.css';
+import InputForm from "./components/InputForm/InputForm";
+import DataFeed from "./components/DataFeed/DataFeed";
+import {useState} from "react";
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const INIT_DATA = [
+        {name: 'Nick', age: 37},
+        {name: 'Bulochka', age: 32}
+    ]
+
+    const [users, setUsers] = useState(INIT_DATA);
+
+    const addUserHandler = (user) => {
+        setUsers((prevUsers) => {
+            return [...prevUsers, user]
+        })
+    }
+
+    return (
+        <div>
+            <InputForm onAddUser={addUserHandler}/>
+            <DataFeed users={users}/>
+        </div>
+    );
 }
 
 export default App;
