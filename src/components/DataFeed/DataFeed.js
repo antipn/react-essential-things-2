@@ -1,16 +1,12 @@
 import React from 'react'
+import FeedItem from "../FeedItem/FeedItem";
+import './DataFeed.css'
 
 const DataFeed = (props) => {
     return (
-        <ul>
+        <ul className='data_feed'>
             {props.users.map(user => (
-                <div>
-                    <div>{'__________________'}</div>
-                    <div>{user.name} </div>
-                    <div>{user.age} </div>
-                </div>
-            ))
-
+                <FeedItem user={user}/>))
             }
         </ul>
     )

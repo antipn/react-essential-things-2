@@ -21,7 +21,7 @@ function App() {
     return (
         <div>
             <InputForm onAddUser={addUserHandler}/>
-            <DataFeed users={users}/>
+           <DataFeed users={users}/>
         </div>
     );
 }

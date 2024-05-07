@@ -1,0 +1,18 @@
+.feed_item {
+    display: flex;
+    background-color: grey;
+    padding: 0.5rem;
+    margin: 1rem;
+    width: 15rem;
+    height: 4rem;
+    max-width: 95%;
+    border-radius: 12px;
+    text-align: left;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.25);
+    color: #cccccc;
+
+}
+.feed_item h3 {
+    color: whitesmoke;
+    margin-right: 5px;
+}
